@@ -14,7 +14,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchWorkouts = async () => {
-      const response = await fetch(process.env.BACKEND + 'http://localhost:4000/api/workouts/', {
+      const response = await fetch(process.env.BACKEND + '/api/workouts/', {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }
