@@ -11,9 +11,21 @@ const userRoutes = require('./routes/userRoute')
 //Express app
 const app = express();
 
+// List of allowed origins
+const allowedOrigins = [
+  'https://mern-workout-app-frontend-fens.onrender.com',
+  'localhost:3000' // Add any additional origins here
+];
+
 // Allow requests from your frontend URL
 app.use(cors({
-  origin: 'https://mern-workout-app-frontend-fens.onrender.com' // Replace with your frontend's URL
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.indexOf(origin) !== -1) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  }
 }));
 
 //Middleware
