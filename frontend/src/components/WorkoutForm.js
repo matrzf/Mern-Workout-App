@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 import { useState } from "react"
 import { useWorkoutContext } from '../hooks/useWorkoutsContext'
 import { useAuthContext } from "../hooks/useAuthContext"
@@ -24,7 +22,7 @@ const WorkoutForm = () => {
 
     const workout = {title, load, reps}
 
-    const response = await fetch(process.env.BACKEND + '/api/workouts', {
+    const response = await fetch('https://mern-workout-app-backend-r7bm.onrender.com' + '/api/workouts', {
       method: 'POST',
       body: JSON.stringify(workout),
       headers: {

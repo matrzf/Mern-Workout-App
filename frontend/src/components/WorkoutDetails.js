@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 import { useWorkoutContext } from "../hooks/useWorkoutsContext"
 import { useAuthContext } from "../hooks/useAuthContext"
 
@@ -15,7 +13,7 @@ const WorkoutDetails = ({workout}) => {
       return
     }
 
-    const response = await fetch(process.env.BACKEND + '/api/workouts/' + workout._id, {
+    const response = await fetch('https://mern-workout-app-backend-r7bm.onrender.com' + '/api/workouts/' + workout._id, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${user.token}`

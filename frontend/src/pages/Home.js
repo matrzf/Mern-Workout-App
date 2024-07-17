@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 import { useEffect } from "react"
 import { useWorkoutContext } from '../hooks/useWorkoutsContext'
 import { useAuthContext } from '../hooks/useAuthContext'
@@ -14,7 +12,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchWorkouts = async () => {
-      const response = await fetch(process.env.BACKEND + '/api/workouts/', {
+      const response = await fetch('https://mern-workout-app-backend-r7bm.onrender.com' + '/api/workouts/', {
         headers: {
           'Authorization': `Bearer ${user.token}`
         }

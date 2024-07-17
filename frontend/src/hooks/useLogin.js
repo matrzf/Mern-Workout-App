@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 import { useState } from 'react';
 import {useAuthContext} from './useAuthContext'
 
@@ -12,7 +10,7 @@ export const useLogin = () => {
     setIsLoading(true)
     setError(null)
 
-    const response = await fetch(process.env.BACKEND + '/api/user/login', {
+    const response = await fetch('https://mern-workout-app-backend-r7bm.onrender.com' + '/api/user/login', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json'
