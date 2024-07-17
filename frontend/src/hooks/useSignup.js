@@ -10,7 +10,7 @@ export const useSignup = () => {
     setIsLoading(true)
     setError(null)
 
-    const response = await fetch('https://mern-workout-app-backend-r7bm.onrender.com' + '/api/user/signup', {
+    const response = await fetch('https://mern-workout-app-backend-r7bm.onrender.com/api/user/signup', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json'
