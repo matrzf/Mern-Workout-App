@@ -13,7 +13,7 @@ const app = express();
 
 // Allow requests from your frontend URL
 app.use(cors({
-  origin: 'http://localhost:3000' // Replace with your frontend's URL
+  origin: 'https://mern-workout-app-frontend-fens.onrender.com' // Replace with your frontend's URL
 }));
 
 //Middleware
