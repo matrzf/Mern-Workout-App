@@ -13,7 +13,7 @@ const app = express();
 
 // Use the CORS middleware with the custom options
 app.use(cors({
-  origin: 'https://mern-workout-app-backend-r7bm.onrender.com' // Replace with your frontend's URL
+  origin: 'https://mern-workout-app-frontend-da6g.onrender.com' // Replace with your frontend's URL
 }));
 
 //Middleware
