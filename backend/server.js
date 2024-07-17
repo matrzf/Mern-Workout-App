@@ -17,6 +17,9 @@ const allowedOrigins = [
   'localhost:3000' // Add any additional origins here
 ];
 
+// Use the CORS middleware with the custom options
+app.use(cors(corsOptionsDelegate));
+
 // Allow requests from your frontend URL
 app.use(cors({
   origin: (origin, callback) => {
