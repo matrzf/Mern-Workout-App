@@ -13,7 +13,7 @@ const app = express();
 
 // Use the CORS middleware with the custom options
 app.use(cors({
-  origin: 'http://localhost:3000/' // Replace with your frontend's URL
+  origin: 'http://localhost:3000' // Replace with your frontend's URL
 }));
 
 //Middleware
